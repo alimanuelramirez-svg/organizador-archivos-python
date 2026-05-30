@@ -4,3 +4,8 @@ CarpetaPrueba/
 # Archivos de caché de Python
 __pycache__/
 *.pyc
+
+# Carpetas de compilación de PyInstaller
+build/
+dist/
+*.spec
