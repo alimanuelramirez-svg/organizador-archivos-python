@@ -2,8 +2,8 @@ import os
 import shutil
 
 # 1. Definir la ruta de la carpeta que queremos organizar.
-# En este caso, usaremos la carpeta de prueba que acabamos de crear.
-CARPETA_A_ORGANIZAR = "CarpetaPrueba"
+# En este caso, usaremos la carpeta de Descargas del usuario.
+CARPETA_A_ORGANIZAR = r"C:\Users\Ali Ramirez\Downloads"
 
 # 2. Definir las categorías y sus extensiones correspondientes.
 # Este diccionario mapea el nombre de la carpeta destino a una lista de extensiones.
