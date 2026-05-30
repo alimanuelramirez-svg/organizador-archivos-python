@@ -1,0 +1,6 @@
+# Ignorar carpeta de prueba local
+CarpetaPrueba/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
