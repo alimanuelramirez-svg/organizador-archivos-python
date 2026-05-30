@@ -59,6 +59,21 @@ def organizar_carpeta(ruta_carpeta):
             # Definir la ruta de destino final del archivo
             ruta_destino_final = os.path.join(ruta_carpeta_destino, elemento)
 
+            # --- RESOLUCIÓN DE DUPLICADOS ---
+            # Si el archivo ya existe en el destino, le añadimos un número para no sobrescribirlo.
+            if os.path.exists(ruta_destino_final):
+                nombre_base, ext = os.path.splitext(elemento)
+                contador = 1
+                while True:
+                    nuevo_nombre = f"{nombre_base} ({contador}){ext}"
+                    ruta_destino_final = os.path.join(ruta_carpeta_destino, nuevo_nombre)
+                    if not os.path.exists(ruta_destino_final):
+                        # Encontramos un nombre disponible, actualizamos el nombre del elemento para el reporte
+                        elemento = nuevo_nombre
+                        break
+                    contador += 1
+            # ---------------------------------
+
             try:
                 # Mover el archivo
                 shutil.move(ruta_elemento, ruta_destino_final)
